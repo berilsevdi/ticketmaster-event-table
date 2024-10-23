@@ -1,6 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const FilterBar = ({ selectedType, setSelectedType, handleFilter, eventTypes }) => {
+const FilterBar = ({
+  selectedType,
+  setSelectedType,
+  handleFilter,
+  eventTypes,
+}) => {
   return (
     <div className="filter-bar">
       <select

@@ -1,5 +1,5 @@
 import React from "react";
-import './Table.css';
+import "./Table.css";
 
 const Table = ({ columns, data, onSort, sortField, sortDirection }) => {
   return (
@@ -9,13 +9,15 @@ const Table = ({ columns, data, onSort, sortField, sortDirection }) => {
           {columns.map((column, index) => (
             <th
               key={index}
-              onClick={() => column.sortable ? onSort(column.accessor) : null}
-              style={{ cursor: column.sortable ? 'pointer' : 'default' }}
+              onClick={() => (column.sortable ? onSort(column.accessor) : null)}
+              style={{ cursor: column.sortable ? "pointer" : "default" }}
             >
               {column.label}{" "}
               {sortField === column.accessor
-                ? sortDirection === 'asc' ? '↑' : '↓'
-                : ''}
+                ? sortDirection === "asc"
+                  ? "↑"
+                  : "↓"
+                : ""}
             </th>
           ))}
         </tr>
