@@ -71,8 +71,8 @@ const EventsTable = () => {
 
   const columns = [
     { label: "Event Name", accessor: "name", sortable: true },
-    { label: "Date", accessor: "date", sortable: false },
-    { label: "Venue", accessor: "venue", sortable: false },
+    { label: "Date", accessor: "date", sortable: true },
+    { label: "Venue", accessor: "venue", sortable: true },
     { label: "Details", accessor: "details", sortable: false },
   ];
 
