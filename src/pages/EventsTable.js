@@ -3,16 +3,16 @@ import React, { useState, useEffect} from "react";
 import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
 import { API_KEY } from "../config";
-import SearchBar from '../components/SearchBar';
-import Table from '../components/Table';
-import Pagination from "../components/Pagination";
+import SearchBar from '../components/SearchBar/SearchBar';
+import Table from '../components/Table/Table';
+import Pagination from "../components/Pagination/Pagination";
 
 const EventsTable = () => {
     const [events, setEvents] = useState([]); //state of events
     const [searchKeyword, setSearchKeyword] = useState('');
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
-    const [pageSize] = useState(10);
+    const [pageSize] = useState(50);
     const [sortField, setSortField] = useState(null);  
     const [sortDirection, setSortDirection] = useState('asc'); 
 
@@ -33,7 +33,7 @@ const EventsTable = () => {
             }
         );         
         //console.log('API Response:', response.data);
-        console.log('API Response:', response.data._embedded.events);
+        //console.log('API Response:', response.data._embedded.events);
 
         if (response.data._embedded && response.data._embedded.events) {
             setEvents(response.data._embedded.events); // Save events to state

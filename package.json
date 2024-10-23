@@ -12,16 +12,14 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-
   "jest": {
-  "transformIgnorePatterns": [
-    "/node_modules/(?!axios)"
-  ],
-  "transform": {
-    "^.+\\.[t|j]sx?$": "babel-jest"
-  }
-},
-
+    "transformIgnorePatterns": [
+      "/node_modules/(?!axios)"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -54,5 +52,4 @@
     "babel-jest": "^29.7.0",
     "jest": "^27.5.1"
   }
-  
 }

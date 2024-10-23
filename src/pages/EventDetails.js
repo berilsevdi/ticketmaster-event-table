@@ -17,7 +17,7 @@ const EventDetail = () => {
                     }
                 }
             );
-            console.log('API Response:', response.data);
+            //console.log('API Response:', response.data);
             setEvent(response.data);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -58,7 +58,8 @@ const EventDetail = () => {
     const eventSegment = classifications?.[0]?.segment?.name || 'Segment not available';
     const eventGenre = classifications?.[0]?.genre?.name || 'Genre not available';
     const eventSubGenre = classifications?.[0]?.subGenre?.name || 'Sub-genre not available';
-    const eventImage = images?.[0]?.url || '';
+    const eventImage = images?.[0]?.url || ''; 
+    console.log(eventImage);
     const eventSeatMap = seatmap?.staticUrl || '';
 
 
